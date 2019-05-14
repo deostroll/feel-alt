@@ -1,11 +1,8 @@
 {
   "name": "feel",
-  "version": "1.0.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "A JavaScript based rule engine based on DMN v1.2 standard",
   "main": "index.js",
-  "directories": {
-    "test": "./node_modules/.bin/mocha -r ts-node/register ./test/**/*.test.spec.ts"
-  },
   "dependencies": {},
   "devDependencies": {
     "@types/chai": "^4.1.7",
@@ -17,11 +14,11 @@
     "typescript": "^3.4.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ts-node/register test/**/*.spec.ts"
   },
   "repository": {
     "type": "git",
-    "url": "http://venkatesh@10.73.97.24/oecloud.io/feel.git"
+    "url": "http://10.73.97.24/oecloud.io/feel.git"
   },
   "keywords": [],
   "author": "",
