@@ -4,7 +4,13 @@ textual_expression = literal;
 
 literal = simple_literal / "null" { return null };
 
-simple_literal = string_literal;
+simple_literal = numeric_literal / string_literal;
+
+numeric_literal = "-"? (digits ("." digits)? / "." digits) { return { type: 'number', value: parseFloat(text()) }};
+
+digits = digit+;
+
+digit = [0-9];
 
 string_literal = '"' chars:(_allowed_chars_ / seq:string_escape_sequence { return seq })* '"' { return { type: 'string' , value: chars.join('') } };
 
