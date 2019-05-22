@@ -4,7 +4,7 @@ textual_expression = literal;
 
 literal = simple_literal / "null" { return null };
 
-simple_literal = numeric_literal / string_literal;
+simple_literal = numeric_literal / string_literal / boolean_literal;
 
 numeric_literal = "-"? (digits ("." digits)? / "." digits) { return { type: 'number', value: parseFloat(text()) }};
 
@@ -29,3 +29,6 @@ string_escape_sequence = "\\" (
   );
 
 hex_digit = [0-9a-fA-F];
+
+ boolean_literal = "true" { return { type: 'boolean', value: true }}
+  / "false" { return { type: 'boolean', value: false }};
