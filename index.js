@@ -1,5 +1,5 @@
-const { evaluate } = require('./src/core/ast/evaluator');
-const { parse } = require('./src/core/feel');
+const { evaluate } = require('./lib/core/ast/evaluator');
+const { parse } = require('./lib/parser');
 function noop() {};
 
 /**

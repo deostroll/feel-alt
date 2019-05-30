@@ -11,6 +11,6 @@ gulp.task('generate-parser', () =>
     .pipe(rename({
       basename: 'feel'
     }))
-    .pipe(gulp.dest('./src/core'))
+    .pipe(gulp.dest('./src/parser'))
 );
 
