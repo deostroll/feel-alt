@@ -5,6 +5,7 @@ const { expect } = require('chai');
 const chalk = require('chalk');
 
 const { NameResolver, helperFactory } = require('../../../../lib/parser/helper');
+const { getDecisions, getInputData, getItemDefinitions } = require('../../../../lib/core/dmn/index');
 
 describe(chalk.blue('name validation if it contains "-"'), () => {
 
@@ -21,6 +22,8 @@ describe(chalk.blue('name validation if it contains "-"'), () => {
     });
 
     it('validate the "-" in the inputData', function(done) {
+        
+        console.log(JSON.stringify(getDecisions(jsonData), null, 1))
         var text = 'Full-Name'
         var helper = helperFactory(jsonData);
         var result = helper.isValidName(text);
