@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <definitions namespace="https://github.com/agilepro/dmn-tck" name="0001-input-data-string" id="_0001-input-data-string" xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <itemComponent isCollection="false" name="tfullName" id="_86391af7-ea7a-434e-a150-f58875df0f9f">
-            <typeRef>FullName</typeRef>
-    </itemComponent>
-    <itemComponent isCollection="false" name="FullName" id="_86391af7-ea7a-434e-a150-f58875df0f9f">
-            <typeRef>string</typeRef>
-    </itemComponent>
+    <itemDefinition isCollection="false" name="tfullName" label="tfullName">
+        <itemComponent isCollection="false" name="b" id="_86391af7-ea7a-434e-a150-f58875df0f9f">
+            <itemComponent isCollection="false" name="c" id="_86391af7-ea7a-434e-a150-f58875df0f9f">
+                <typeRef>string</typeRef>
+            </itemComponent>
+        </itemComponent>
+    </itemDefinition>
     <decision name="Greeting Message" id="d_GreetingMessage">
         <variable typeRef="string" name="Greeting Message"/>
         <informationRequirement id="_8c935b50-10b7-426b-80a9-dddb4264b4a9">
             <requiredInput href="#i_FullName"/>
         </informationRequirement>
         <literalExpression>
-            <text>"Hello " + Full-Name</text>
+            <text>"Hello " + a.b.c</text>
         </literalExpression>
     </decision>
-    <inputData name="Full-Name" id="i_FullName">
-        <variable typeRef="tfullName" name="a.b.c"/>
+    <inputData name="a" id="i_FullName">
+        <variable typeRef="tfullName" name="a"/>
     </inputData>
     <dmndi:DMNDI>
         <dmndi:DMNDiagram id="_0001-input-data-string_D1">
