@@ -22,15 +22,9 @@ describe(chalk.blue('name validation if it contains "-"'), () => {
         });
     });
 
-<<<<<<< HEAD
     it('validate the "-" in the inputData', function(done) {
         //console.log(JSON.stringify(jsonData, null, 2));
         console.log(JSON.stringify(getInputData(jsonData), null, 1))
-=======
-    it('should assert that the variable name exists in the containing document', function() {
-        
-        // console.log(JSON.stringify(getDecisions(jsonData), null, 1))
->>>>>>> a4f6c08edd7b7d0b931d8e00c02e2fe5a7afb1b3
         var text = 'Full-Name'
         var helper = helperFactory(jsonData);
         var result = helper.isValidName(text);
