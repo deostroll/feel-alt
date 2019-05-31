@@ -1,4 +1,4 @@
-const { evaluate } = require('./lib/core/ast/evaluator');
+
 const { parse } = require('./lib/parser');
 function noop() {};
 
