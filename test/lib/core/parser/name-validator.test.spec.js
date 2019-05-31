@@ -15,15 +15,15 @@ describe(chalk.blue('name validation if it contains "-"'), () => {
         parseString(xml, {trim: true}, function (err, result) {
             if(err) {
                 done(err);
-            } 
+            }
             jsonData = result;
             done();
         });
     });
 
     it('validate the "-" in the inputData', function(done) {
-        
-        console.log(JSON.stringify(getDecisions(jsonData), null, 1))
+        //console.log(JSON.stringify(jsonData, null, 2));
+        console.log(JSON.stringify(getInputData(jsonData), null, 1))
         var text = 'Full-Name'
         var helper = helperFactory(jsonData);
         var result = helper.isValidName(text);
