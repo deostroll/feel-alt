@@ -21,7 +21,9 @@
     "mocha": "^6.1.4"
   },
   "scripts": {
-    "test": "mocha test/**/*.spec.js"
+    "test": "mocha test/**/*.spec.js",
+    "gulp": "gulp",
+    "mocha": "mocha"
   },
   "repository": {
     "type": "git",
