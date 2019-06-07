@@ -30,7 +30,7 @@ describe(chalk.blue('Parsing string-literals'), () => {
               })
           }
       })
-  })
+  });
 
     it('should conform string "abcd1234" to the expected ast node', () => {
       var expected_ast = {
