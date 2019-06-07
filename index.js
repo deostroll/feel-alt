@@ -25,4 +25,4 @@ function make_debug(input) {
   return parse(input);
 }
 
-module.exports = { evaluate, make, make_debug };
+module.exports = { make, make_debug };

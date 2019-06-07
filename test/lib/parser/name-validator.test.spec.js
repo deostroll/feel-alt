@@ -4,9 +4,9 @@ const path = require('path');
 const { expect } = require('chai');
 const chalk = require('chalk');
 
-const { NameResolver, helperFactory } = require('../../../../lib/parser/helper');
-const { getDecisions, getInputData, getItemDefinitions } = require('../../../../lib/core/dmn/index');
-const { parse } = require('../../../../lib/parser');
+const { NameResolver, helperFactory } = require('../../../lib/parser/helper');
+const { getDecisions, getInputData, getItemDefinitions } = require('./../../../lib/core/dmn/index');
+const { parse } = require('./../../../lib/parser');
 
 describe(chalk.blue('name validation if it contains "-"'), () => {
 

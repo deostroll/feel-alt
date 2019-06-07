@@ -23,7 +23,8 @@
   "scripts": {
     "test": "mocha test/**/*.spec.js",
     "gulp": "gulp",
-    "mocha": "mocha"
+    "mocha": "mocha",
+    "peg" : "pegjs .tmp/feel.pegjs"
   },
   "repository": {
     "type": "git",

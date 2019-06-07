@@ -1,7 +1,7 @@
 const { expect } = require('chai');
 const chalk = require('chalk');
 
-const { make } = require('./../../index');
+const { make } = require('./../../../../index');
 describe(chalk.blue('Parsing string-literals'), () => {
   describe(chalk.green('Strings'), () => {
 
