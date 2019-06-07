@@ -22,20 +22,11 @@ describe(chalk.blue('name validation if it contains "-"'), () => {
         });
     });
 
-    it('validate the "-" in the inputData', function(done) {
-        //console.log(JSON.stringify(jsonData, null, 2));
-        console.log(JSON.stringify(getInputData(jsonData), null, 1))
-        var text = 'Full-Name'
-        var helper = helperFactory(jsonData);
-        var result = helper.isValidName(text);
-        expect(result).to.be.equal(true);
-    });
-
-    it('should assert that the ast created is that of a name object', () => {
-        let ast = parse('Full-Name', jsonData);
+    it('should assert that the ast created is that of a path expression object', () => {
+        let ast = parse('a.b.c', jsonData);
         let expected = {
-            type:'name',
-            variableName: 'Full-Name'
+            type:'path expression',
+            path: ['a', 'b', 'c']
         };
 
         expect(ast).to.deep.equal(expected);

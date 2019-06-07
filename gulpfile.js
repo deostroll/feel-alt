@@ -9,7 +9,8 @@ gulp.task('generate-parser', () =>
   gulp.src(['./.tmp/feel.pegjs'])
     .pipe(peg({
       trace: true,
-      format: "commonjs"
+      format: "commonjs",
+      cache: false
     }))
     .pipe(rename({
       basename: 'feel'
@@ -31,4 +32,14 @@ gulp.task('make-peg', () =>
 
 gulp.task('clean', () => gulp.src('./.tmp').pipe(clean()));
 
-module.exports.build = gulp.series('make-initializer', 'make-peg', 'generate-parser', 'clean')
+gulp.task('beep', cb => { 
+  console.log('\007'); 
+  cb(); 
+});
+
+module.exports.build = gulp.series('make-initializer', 'make-peg', 'generate-parser', 'clean', 'beep')
+
+module.exports.watch = function(cb) {
+  gulp.watch(['./lib/parser/grammar/feel.pegjs', './lib/parser/grammar/initializer.js'], gulp.series('build'))
+  cb();
+}
