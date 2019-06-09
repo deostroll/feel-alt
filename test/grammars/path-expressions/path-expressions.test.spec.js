@@ -49,9 +49,10 @@ describe(chalk.blue('validating path expressions'), () => {
                 var result = tracer.getResult();
                 writeJson('trace.json', result);
                 return done(e);
-            }
-            
+            }      
+            console.log(actual_ast);
             expect(actual_ast).to.deep.equal(expected_ast);
+            done();
         });
 
     });
