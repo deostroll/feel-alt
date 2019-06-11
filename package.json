@@ -6,6 +6,7 @@
   "dependencies": {
     "jsonpath-plus": "^0.19.0",
     "lodash": "^4.17.11",
+    "moment-timezone": "^0.5.25",
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
@@ -24,7 +25,7 @@
     "test": "mocha test/**/*.spec.js",
     "gulp": "gulp",
     "mocha": "mocha",
-    "peg" : "pegjs .tmp/feel.pegjs"
+    "peg": "pegjs .tmp/feel.pegjs"
   },
   "repository": {
     "type": "git",

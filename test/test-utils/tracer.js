@@ -20,7 +20,7 @@ class Tracer {
       let displayString = event.location.start.line + ':' + event.location.start.column
           + '-' + event.location.end.line + ':' + event.location.end.column
           + " "
-          + pad(event.type, 10)
+        + pad(event.type, 10) + " "
           + repeat("  ", this.indentLevel) + event.rule;
       console.log(displayString);
       this.result.obj.push(event);
@@ -50,6 +50,11 @@ class Tracer {
   }
 }
 
+const NoopTracer = {
+    trace: function(){}
+};
+
 module.exports = {
-  Tracer
+  Tracer,
+  NoopTracer
 }
